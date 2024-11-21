@@ -22,7 +22,8 @@ a { color: var(--default-green); text-decoration: none; transition: all 0.3s; }
 a:hover { color: color-mix(in srgb, var(--default-green), transparent 25%); }
 
 /*Global Header*/
-.header { padding: 15px 0; color: var(--default-black); background-color: var(--default-bg); box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1); transition: all 0.5s; z-index: 997; }
+.header { padding: 16px 0 16px 16px; color: var(--default-black); background-color: var(--default-bg); box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1); transition: all 0.5s; z-index: 997; }
+.header .container-fluid {padding: 0;}
 .header .logo { line-height: 1; }
 .header .logo img { max-height: 36px; margin-right: 8px; }
 .header .logo h1 { margin: 0; font-size: 3.2rem; font-weight: 300; text-transform: uppercase; }
@@ -33,9 +34,13 @@ a:hover { color: color-mix(in srgb, var(--default-green), transparent 25%); }
 .header .header-social-links a i { line-height: 0px; }
 
 @media (max-width: 1200px) {
+  .header { padding: 15px 24px;}
   .header .logo { order: 1; }
   .header .header-social-links { order: 2; }
   .header .navmenu { order: 3; }
+}
+@media (max-width: 500px) {
+    .header { padding: 15px 16px;}
 }
 
 /*Navigation Menu*/
@@ -60,7 +65,7 @@ a:hover { color: color-mix(in srgb, var(--default-green), transparent 25%); }
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
-  .mobile-nav-toggle { margin-right: 10px; color: var(--nav-color); font-size: 2.8rem; line-height: 0; cursor: pointer; transition: color 0.3s; }
+  .mobile-nav-toggle { color: var(--nav-color); font-size: 2.8rem; line-height: 0; cursor: pointer; transition: color 0.3s; }
 
   .navmenu { padding: 0; z-index: 9997; }
 
@@ -88,11 +93,15 @@ a:hover { color: color-mix(in srgb, var(--default-green), transparent 25%); }
 /*Global Sections*/
 section, .section { padding: 60px 0; scroll-margin-top: 100px; overflow: clip; background-color: var(--default-bg); }
 
-@media (max-width: 1199px) {
-
-  section,
-  .section {
+@media (max-width: 1200px) {
+  section, .section {
+    padding: 60px 24px;
     scroll-margin-top: 66px;
+  }
+}
+@media (max-width: 500px) {
+  section, .section {
+    padding: 60px 16px;
   }
 }
 
@@ -101,7 +110,7 @@ section, .section { padding: 60px 0; scroll-margin-top: 100px; overflow: clip; b
 
 .section-title h2 { position: relative; padding: 0 0 20px; margin: 0; font-size: 3.2rem; font-weight: 700; }
 .section-title h2:after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; display: block; width: 50px; height: 3px; margin: auto; background: var(--default-green);}
-.section-title p { margin: 20px 0; font-family: var(--kr-font); font-weight: 500; font-size: 2rem;}
+.section-title p { margin: 20px 0; font-family: var(--kr-font); font-weight: 500; font-size: 2rem; word-break: keep-all;}
 .section-title p span{display: inline-block; padding: 10px 20px; margin: 0 20px ; font-size: 1.8rem; border: 1px solid var(--default-black); border-radius: 50px;}
 
 @media(max-width:1200px){
