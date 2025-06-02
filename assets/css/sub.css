@@ -36,6 +36,33 @@
   .portfolio .portfolio-filters li { margin: 0 0 10px 0; font-size: 14px; }
 }
 
+.portfolio .info_txt{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.portfolio .info_txt li p{
+  margin-bottom: 0;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 12px;
+  word-break: keep-all;
+}
+
+.portfolio .info_txt li p i{
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .portfolio .info_txt {
+    flex-direction: column;
+    align-items: end;
+    gap: 4px;
+    font-size: 10px;
+  }
+}
+
 .portfolio .portfolio-item { position: relative; overflow: hidden; }
 .portfolio .portfolio-item .portfolio-info { position: absolute; left: 7px; right: 8px; bottom: -100%; padding: 15px; opacity: 0; background: color-mix(in srgb, var(--default-black), transparent 10%); transition: all ease-in-out 0.5s; z-index: 3; }
 .portfolio .portfolio-item:hover .portfolio-info { bottom: 0; opacity: 1; }
